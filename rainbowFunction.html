@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+function makeRain(){
+	var rain = document.createElement("div")
+	document.body.appendChild(rain);
+	rain.style.height = "200px";
+	rain.style.backgroundSize = "contain";
+	rain.style.backgroundRepeat = "no-repeat";
+	rain.style.width = "200px";
+	rain.style.backgroundImage = "url(https://i.pinimg.com/originals/bb/d1/b0/bbd1b00158eb5ecc1bbb021b6b80a46e.gif)";
+
+
+	rain.addEventListener("click",function(){
+	rain.style.backgroundImage = "url(https://64.media.tumblr.com/234622efb53b2e15e271fe1197931389/tumblr_mutssiu7MI1svwlszo1_500.gifv)"
+	rain.style.backgroundSize = "contain";
+	rain.style.backgroundRepeat = "no-repeat";
+	})
+	rain.style.display="inline-block"
+}
+	setInterval(makeRain,500)
+	rain.style.display="inline-block"
+makeRain();
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function headTilting (){
+		var head = document.createElement("div");
+		document.body.appendChild(head);
+		head.style.width = "400px";
+		head.style.height = "400px";
+		head.style.position = "relative";
+		head.style.display = "inline-block";
+		head.style.backgroundImage = "url(headTilt.gif)";
+		head.style.backgroundSize = "cover";
+		head.style.backgroundSize = "contain";
+		head.style.backgroundRepeat = "no-repeat";
+
+
+	}
+
+	headTilting()
+	setInterval(headTilting,500)
+
+</script>
+
+
+
+</body>
+</html>
