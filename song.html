@@ -2,13 +2,48 @@
 <html>
 <head>
 	<title></title>
+
+<style type="text/css">
+	
+	#albumPage{
+	height: 100px;
+	width: 100px;
+	}
+
+</style>
+
 </head>
 <body>
 
 <div id="albumPage"></div>
 <audio id="takemeorleaveme" src="rent.mp3"></audio>
 
-<script type="text/javascript"></script>
+<script type="text/javascript">
+	
+	var box = document.getElementById('albumPage')
+	var song = document.getElementById('takemeorleaveme')
+
+	var clickCounter = 0;
+
+	box.addEventListener("click", function(){
+
+		clickCounter = clickCounter +1;
+		console.log(clickCounter)
+
+		if (clickCounter%2 == 1){
+			song.play()
+			box.style.backgroundImage = "url(https://m.media-amazon.com/images/I/81reolbqVvL._SL1425_.jpg)"
+		}
+
+		else if (clickCounter%2 == 0){
+			song.pause();
+		}
+
+		})
+
+</script>
+
+
 
 </body>
 </html>
