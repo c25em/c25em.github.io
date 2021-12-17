@@ -6,8 +6,13 @@
 <style type="text/css">
 	
 	#albumPage{
-	height: 100px;
-	width: 100px;
+	height: 800px;
+	width: 800px;
+	background-color: white;
+	background-size: contain;
+	background-image: url(https://ichef.bbci.co.uk/news/1024/media/images/79246000/jpg/_79246545_rent-logo.jpg);
+	background-repeat: no-repeat;
+
 	}
 
 </style>
@@ -15,7 +20,7 @@
 </head>
 <body>
 
-<div id="albumPage"></div>
+<center><div id="albumPage"></div></center>
 <audio id="takemeorleaveme" src="rent.mp3"></audio>
 
 <script type="text/javascript">
@@ -33,6 +38,7 @@
 		if (clickCounter%2 == 1){
 			song.play()
 			box.style.backgroundImage = "url(https://m.media-amazon.com/images/I/81reolbqVvL._SL1425_.jpg)"
+			box.style.background
 		}
 
 		else if (clickCounter%2 == 0){
