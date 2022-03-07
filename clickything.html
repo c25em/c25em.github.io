@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+#animals{
+
+height: 900px;
+width: 2000px;
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+
+</style>
+
+</head>
+<body>
+
+	<center></center><div id = "animals"></div></center>
+
+
+<script type="text/javascript">
+	
+var x = document.getElementById('animals')
+
+
+var clickCounter = 0
+
+x.addEventListener("click", function(){
+
+
+clickCounter = clickCounter +1;
+		console.log(clickCounter)
+
+
+if (clickCounter == 10) {
+
+x.style.backgroundImage = "url(https://i.pinimg.com/736x/1b/ef/b5/1befb5723f54627768e1d77642ca4d45.jpg)"
+
+}
+
+else if (clickCounter !== 70) {
+
+x.style.backgroundImage = "url(https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg)"
+
+}
+
+}
+
+)
+
+</script>
+
+</body>
+</html>
