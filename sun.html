@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+#clouds{
+	background-image: url(images.png);
+	height: 100px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	left: 400px;
+	top: 25px;
+	
+}
+
+
+
+
+#sun{
+	height: 200px;
+	width: 200px;
+	background-image: url(sun.png);
+	transition: .75s;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-size: contain;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div id = "sun" ></div>
+<div id = "clouds" ></div>
+
+<script type="text/javascript">
+	
+var cloud1 = document.getElementById('clouds')
+
+document.addEventListener("mousemove", function(event){
+
+	sun.style.left = event.clientX-100 + "px";
+	sun.style.top = event.clientY-100 + "px";
+
+	
+})
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

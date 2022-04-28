@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+ 	.virus{
+        	left:1000px;
+        	top:800px;
+	      	background-size:contain;
+			width:100px;
+			height:100px;
+			background-image:url(covid.png);
+			transition:.5s;
+			margin:60px;
+			background-position:center;
+			background-repeat: no-repeat;
+			position:absolute;
+
+
+		}
+
+/*This is the styling for the virus, like the height, width, and basically what it look likes. The transition is there so that the virus won't just appear at a set interval, and actually travels to the next placement. 
+*/
+	</style>
+</head>
+<body>
+
+<audio id="sound" src="pew.wav"> </audio>
+
+This is the sound that would be present when clicking the covid to go away
+
+    <p>viruses gone:</p><input id="input"></input>
+
+    This is just the print for the viruses gone
+
+<script type="text/javascript">
+	
+var pew = document.getElementById('sound');
+var input = document.getElementById('input');
+var x = 0;
+
+Using the two elements above, these are the variables that would be used in the function
+
+function createCorona(){
+
+ var corona = document.createElement('div');
+        document.body.appendChild(corona);
+        corona.classList.add("virus");
+
+This adds the virus div to the class of corona, making it so that if something affects the class corona, the virus div would be affected as well
+
+function changePosition() {
+            corona.style.left = 1000 * Math.random() + "px";
+            corona.style.top = 1000 * Math.random() + "px";
+
+}
+
+This makes it so that the placement of the corona div will constantly change and be random
+
+corona.addEventListener("click", function() {
+            console.log("hi");
+            x = x + 1;
+            input.value = x;
+            corona.classList.remove("virus");
+            pew.play()
+         })
+
+ setInterval(changePosition, 2000)
+    };
+
+
+    setInterval(createCorona, 1000);
+
+</script>
+
+</body>
+</html>

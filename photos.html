@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Portfolio</title>
+
+
+<style type="text/css">
+	
+#photos{
+border:1px solid black;
+height: 800px;
+width: 600px;
+background-image: url(shadows1.png);
+transition: 1s;
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id = "photos"></div>
+
+
+<script type="text/javascript">
+	var x = 0;
+	
+function photoChange(){
+	x = x + 1
+	if (x == 8) {
+
+	x = 0
+
+	}
+
+	else if (x < 9) {
+
+		photos.style.backgroundImage = "url(shadows" + x + ".png)"
+}
+}
+
+setInterval(photoChange, 2000)
+</script>
+
+</body>
+</html>
